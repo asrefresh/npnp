@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* CSS Document */
+/* ================================= 
+  Base CSS
+==================================== */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-family: 'Athiti', sans-serif;
+	font-size: .95em;
+	margin-bottom: 1.8em;
+	text-indent: 1.5em;
+}
+h2,
+h3,
+a {
+	color: #093a58;
+}
+h2,
+h3 {
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+  	width: 100%;
+ 	height: auto;
+	max-width: 100%;
+	
+}
+/* ================================= 
+  My CSS Navbar
+==================================== */
+.main-header {
+	width: 100%;
+}
+.main-header,
+.navbar {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font-size: 1em;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color:rgba(253,213,255,1.00);
+	padding-bottom: 5px;
+}
+
+.main-header h1 {
+	font: oblique;
+	font-size: 1.25em;
+}
+.bar li{
+	margin-top: 10px;
+	
+}
+.bar a {
+	text-align: center;
+	display: block;
+	padding: 5px 50px;
+}
+.bar a:hover {
+	color: white;
+	background-color: rgba(0,94,255,1.00);
+}
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+.banner {
+	height: 100%;
+	
+}
+.Bbanner {
+	
+}
+.Bbanner h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: white;
+	font-size: 1em;
+}
+.banner img {
+	position: relative;
+	max-height: 100%;
+}
+.title {
+	text-align: center;
+	font-family: 'TH Kodchasal';
+
+}
+.title h1{
+		margin: 0 auto;
+}
+.firstKS {
+	display: inline-block;
+}
+.firstKSimg {
+	float: left;
+	margin-top: 5px;
+	margin-right: 25px;
+	margin-bottom: 15px;
+	border-radius: 20px;
+}
+.firstKSp {
+	font-size:.75em;
+}
+.secondKS {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 35px;
+}
+.secondKSimg {
+	width: 30%;
+	height: 30%;
+	text-align: left;
+	margin-right: 15px;	
+	border: 1px solid #ccc; 
+	padding: 5px;
+	border-radius: 20px;
+}
+.thirdKSimg {
+	width: 30%;
+	height: 30%;
+	text-align: right;
+	margin-left: 15px;
+	border: 1px solid #ccc; 
+	padding: 5px;
+	border-radius: 20px;
+}
+.thirdKS {
+	position: relative;
+	
+}
+
+.fourthKsimg {
+	width: 50%;
+	text-align: center;
+	margin: 15px auto;
+	border-radius: 20px;
+}
+
+footer {
+	background-color: rgba(72,170,200,1.00);
+	margin-top: 30px;
+	padding: 10px;
+	color: rgba(255,255,255,1.00);
+	font-size: 1.25em;
+	text-align: center;
+}
+
+/* ================================= x
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.main-header,
+	.navbar,
+	.bar {
+		display: flex;
+		
+	}
+	.main-header {
+		flex-direction: column;
+		align-items:center;
+	}
+	.bar {	
+		flex-direction: row;
+		justify-content: center;
+	}
+	.bar a{
+		padding: 10px 15px;
+	}
+	.Bbanner h1 {
+		font-size:1.25em;
+	}
+	.title {
+		font-size: 2em;
+	}
+	.firstKSp {
+		font-size:1em;
+	}
+	.secondKS {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+	
+	
+}
+
+@media (min-width: 1025px) {
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+		position:fixed;
+		z-index: 2;
+		width: 100%;
+		top: 0;
+		
+	}
+	.main-header h1 {
+		font-size: 1.75em;
+		margin: 0 3em;
+	}
+	.bar a{
+		padding: 10px 15px;
+		border-radius: 30px;
+	}
+	.bar {
+		margin-right: 3em;
+		top: 0;
+	}
+	.banner {
+		margin-top: 65.6px;
+	}
+	.Bbanner h1 {
+		margin-top: 65.6px;
+		font-size:2em;
+	}
+	.title {
+		font-size: 3em;
+	}
+	.firstKSp {
+		font-size:1.8em;
+	}
+}
+.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
+}

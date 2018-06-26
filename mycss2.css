@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+/* ================================= 
+  Base CSS
+==================================== */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+h2,
+h3,
+a {
+	color: #093a58;
+}
+h2,
+h3 {
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+  	width: 100%;
+ 	height: auto;
+	max-width: 100%;
+}
+footer {
+	background-color:#1e90ff;
+	margin-top: 30px;
+	padding: 10px;
+	color: rgba(255,255,255,1.00);
+	font-size: 1.25em;
+	text-align: center;
+}
+.wrap {
+	min-height: calc(100vh - 103.6px);
+}
+/* ================================= 
+  My CSS Navbar
+==================================== */
+.main-header {
+	width: 100%;
+}
+.main-header,
+.navbar {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font-size: 1em;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color:#ffe4e1;
+	padding-bottom: 5px;
+}
+
+.main-header h1 {
+	font: oblique;
+	font-size: 1.25em;
+}
+.bar li{
+	margin-top: 10px;
+	
+}
+.bar a {
+	text-align: center;
+	display: block;
+	padding: 5px 50px;
+}
+.bar a:hover {
+	color: white;
+	background-color: rgba(0,94,255,1.00);
+}
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+/* ================================= 
+  My CSS banner and below
+==================================== */
+.titleimg {
+	position: relative;
+	width: 100%;
+}
+.quote {
+	position: absolute;
+	top: 70%;
+	left: 15%;
+	margin: 0;
+	font-family: 'Indie Flower', cursive;
+	font-size: 1em;
+	color: white;
+}
+.quote2 {
+	position: absolute;
+	top:75%;
+	right: 5%;
+	font-size: 1em;
+	color: white;
+}
+.secondPKimg {
+	display: inline-block;
+	
+	
+}
+
+
+/* ================================= x
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.main-header,
+	.navbar,
+	.bar {
+		display: flex;
+		
+	}
+	.main-header {
+		flex-direction: column;
+		align-items:center;
+	}
+	.bar {	
+		flex-direction: row;
+		justify-content: center;
+	}
+	.bar a{
+		padding: 10px 15px;
+	}
+	/*****header css****/
+	.quote,
+	.quote2 {
+		font-size: 1.5em;
+			
+		}
+	
+}
+
+@media (min-width: 1025px) {
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+		position:fixed;
+		z-index: 2;
+		width: 100%;
+		top: 0;
+		
+	}
+	.main-header h1 {
+		font-size: 1.75em;
+		margin: 0 3em;
+	}
+	.bar a{
+		padding: 10px 15px;
+		border-radius: 30px;
+	}
+	.bar {
+		margin-right: 3em;
+		top: 0;
+	}
+/*****header css****/
+	.quote {
+		font-size: 3em;
+		}
+	.quote2 {
+		top:85%;
+		right: 5%;
+	}
+	
+}
+.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
+}

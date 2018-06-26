@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>countdown</title>
+	<script type="text/javascript">
+function countDown(){
+    var timeA = new Date(); // วันเวลาปัจจุบัน
+    var timeB = new Date("January 9 2018 10:44"); // วันเวลาสิ้นสุด รูปแบบ เดือน/วัน/ปี ชั่วโมง:นาที:วินาที
+    //  var timeB = new Date(2012,1,24,0,0,1,0); 
+    // วันเวลาสิ้นสุด รูปแบบ ปี,เดือน;วันที่,ชั่วโมง,นาที,วินาที,,มิลลิวินาที    เลขสองหลักไม่ต้องมี 0 นำหน้า
+    // เดือนต้องลบด้วย 1 เดือนมกราคมคือเลข 0
+    var timeDifference = timeB.getTime()-timeA.getTime();    
+    if(timeDifference>=0){
+        timeDifference=timeDifference/1000;
+        timeDifference=Math.floor(timeDifference);
+        var wan=Math.floor(timeDifference/86400);
+        var l_wan=timeDifference%86400;
+        var hour=Math.floor(l_wan/3600);
+        var l_hour=l_wan%3600;
+        var minute=Math.floor(l_hour/60);
+        var second=l_hour%60;
+        var showPart=document.getElementById('showRemain');
+        showPart.innerHTML="เหลือเวลา "+wan+" วัน "+hour+" ชั่วโมง "
+        +minute+" นาที "+second+" วินาที"; 
+            if(wan==0 && hour==0 && minute==0 && second==0){
+                clearInterval(iCountDown);
+				window.location='index.html';// ยกเลิกการนับถอยหลังเมื่อครบ
+                // เพิ่มฟังก์ชันอื่นๆ ตามต้องการ
+            }
+    }
+}
+// การเรียกใช้
+var iCountDown=setInterval("countDown()",1000); 
+</script>
+</head>
+
+<body style="background-color: lightgray">
+	<div id="showRemain" style="position:relative;top:100px; width:1000px; height: auto;border: 4px solid black; margin: 0 auto;font-size: 5em;background-color: #fff;"></div>
+</body>
+</html>

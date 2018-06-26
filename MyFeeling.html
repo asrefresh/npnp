@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Feeling</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/main-css.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</head>
+	
+<body>
+	<nav class="navbar sticky-top px-5 navbar-expand-lg fixed-top navbar-light bg-love">
+	  <a class="navbar-brand" href="index.html">@rnon Refresh</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+		<ul class="navbar-nav text-center">
+		  <li class="nav-item">
+ 			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="about.html">About me</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="MyFeeling.html">My feeling</a>
+		  </li>
+		</ul>
+	  </div>
+	</nav>
+<!--ended header/navbar-->
+	<div class="container">
+		<div class="space align-self-center">
+			<p class="text-center" style="margin: 0 auto;">ลองกดปุ่มนี้ แล้วจะเห็นความรู้สึกเรา</p>
+			<div class="text-center">
+				<button type="button" onClick="feeling()" id="MyScript" class="btn btn-outline-success">Click this</button>
+			</div>
+			<p id="field" class="margin-top">ขอบคุณสำหรับทุกสิ่งทุกอย่างที่ผ่านมา เราสัมผัสได้ดีถึงความห่วงใย และความใส่ใจที่มีต่อเรา เราไม่รู้ว่าในสายตาคุณเราโตขึ้นมากแค่ไหน แต่เราว่าเราโตขึ้น กล้าคิดกล้าทำอะไรที่ไม่เคยทำมากขึ้น นี่เราก็เหลือเวลาสำหรับทำงานที่ออสเตรเลียอีกไม่นานละ เราใกล้จะได้อยู่ด้วยกันแล้ว :)<br> เรื่องแม่เรา น้องเรา ครอบครัวเรา ขอให้คุณเชื่อเราว่าเราจะจัดการได้ เพราะถ้าแค่เรื่องในครอบครัวเรา เรายังจัดการไม่ได้ เราจะดูแลคุณได้ยังไง คอยดูเรา เป็นกำลังใจให้เรา เราจะทำให้คุณเห็นให้ได้ ว่าเราโตพอและพร้อมใช้ชีวิตอยู่กับคุณแล้ว <br><br> ด้วยรักและคิดถึง <br> อานนท์</p>
+		</div>
+	</div>
+	<script>
+		function feeling() {
+			alert("สวัสดีจ้ะ");
+			alert("สำหรับ ยศวดี คนเดียวเท่านั้นที่จะดูได้นะ");
+			var password = prompt("บอกรหัสมาหน่อยซิ ถ้าเธอคือยศวดี");
+			if (password == "np23032502") {
+				alert("สวัสดีจ้ะเมียจ๋า");
+				document.getElementById('field').style.display ='block';
+				
+			} else {
+				alert("รหัสไม่ถูกนะจ๊ะ");
+			}
+		}
+	
+	
+	
+	
+	
+	
+	</script>
+<footer class="margin-top" style="padding-top: 15px;">
+	<div class="row">
+		<div class="col-sm-12">
+			<a href="https://www.facebook.com/refresh.arnon"><img src="images/facebook-128.png" alt="facebook" data-toggle="tooltip" data-placement="top" title="Facebook" style="max-width: 55px;max-height: auto;"></a>
+			<a href="https://plus.google.com/u/0/108460192421959596299"><img src="images/google-plus-128.png" alt="google" data-toggle="tooltip" data-placement="top" title="Google+" style="max-width: 55px;max-height: auto;"></a>
+		</div>
+	</div>
+	<div class="col-lg-12" style="text-align: center;">Copyright © 2018, Designed by Arnon Saengsee</div>	
+</footer>
+</body>
+</html>
